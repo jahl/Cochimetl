@@ -3,7 +3,8 @@ RSpec.describe Cochimetl do
     expect(Cochimetl::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "creates a new exchange rate object" do
+    exchange_rate = Cochimetl.new(1, :mxn)
+    expect(exchange_rate).to be_a(Cochimetl::ExchangeRate)
   end
 end
