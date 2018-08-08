@@ -1,6 +1,9 @@
-require "Cochimetl"
 require 'savon'
 require 'nokogiri'
+
+require "Cochimetl/exchange_rate"
+require "Cochimetl/web_service_client"
+require "Cochimetl/version"
 
 module Cochimetl
   @@client = Cochimetl::WebServiceClient.new
