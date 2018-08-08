@@ -9,6 +9,7 @@ module Cochimetl
     end
 
     def to(new_currency)
+      raise ArgumentError, "Currency '#{new_currency}' is not supported." unless Cochimetl.currencies.include? new_currency
       previous_currency = @currency
       @currency = new_currency
       @value *= (Cochimetl.client.exchange(previous_currency) / 1)

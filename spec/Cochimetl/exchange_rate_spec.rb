@@ -28,4 +28,8 @@ RSpec.describe Cochimetl::ExchangeRate do
     expect(subject * 2).to equal(2.0)
     expect(subject / 2).to equal(1.0)
   end
+
+  it "validates for unsupported currencies" do
+    expect{subject.to(:unsupported)}.to raise_exception(ArgumentError)
+  end
 end

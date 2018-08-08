@@ -10,6 +10,12 @@ module Cochimetl
   end
 
   def self.new(value, currency)
+    raise ArgumentError, "Currency '#{currency}' is not supported." unless Cochimetl.currencies.include? currency
+    raise ArgumentError, "'#{value}' is not a numeric value." unless value.is_a? Numeric
     Cochimetl::ExchangeRate.new(value, currency)
+  end
+
+  def self.currencies
+    @@client.supported_currencies
   end
 end

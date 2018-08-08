@@ -34,6 +34,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "nokogiri"
-  spec.add_development_dependency "savon", "~> 2.12.0"
+  spec.add_development_dependency "nokogiri", '~> 1.8', '>= 1.8.2'
+  spec.add_development_dependency "savon", '~> 2.12', '>= 2.12.0'
 end
