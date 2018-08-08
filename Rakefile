@@ -12,7 +12,7 @@
   end
 
   task :release => :build do
-    system "gem push Cochimetl-#{Cochimetl::VERSION}"
+    system "gem push Cochimetl-#{Cochimetl::VERSION}.gem"
   end
 
   rescue LoadError
