@@ -2,6 +2,8 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "Cochimetl/version"
+require "Cochimetl/web_service_client"
+require "Cochimetl/exchange_rate"
 
 Gem::Specification.new do |spec|
   spec.name          = "Cochimetl"
@@ -9,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jahl", "Señor Perro"]
   spec.email         = ["JesusAHdzLpz@gmail.com", "we.yote@gmail.com"]
   
-  spec.summary       = "A gem that facilitates the use of Banxico SOAP web services"
+  spec.summary       = "A gem that facilitates the use of Banxico to get the exchange rates"
   spec.homepage      = "https://github.com/JahlHernandez/Cochimetl"
   spec.license       = "MIT"
 
@@ -32,4 +34,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "nokogiri", '~> 1.8', '>= 1.8.2'
+  spec.add_development_dependency "savon", '~> 2.12', '>= 2.12.0'
 end
