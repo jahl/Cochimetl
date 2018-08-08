@@ -30,7 +30,8 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-  
-  spec.add_development_dependency "nokogiri", '~> 1.8', '>= 1.8.2'
-  spec.add_development_dependency "savon", '~> 2.12', '>= 2.12.0'
+  spec.required_ruby_version  = '>= 2.0'
+
+  spec.add_dependency "nokogiri", '~> 1.8'
+  spec.add_dependency "savon", '~> 2.12'
 end
