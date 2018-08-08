@@ -1,4 +1,5 @@
 # Cochimetl
+[![Gem Version](https://badge.fury.io/rb/Cochimetl.svg)](https://badge.fury.io/rb/Cochimetl)
 [![Maintainability](https://api.codeclimate.com/v1/badges/d97adf18f2090bf80704/maintainability)](https://codeclimate.com/github/JahlHernandez/Cochimetl/maintainability)
 
 A simple Ruby gem to deal with the nightmare that is Banxico
